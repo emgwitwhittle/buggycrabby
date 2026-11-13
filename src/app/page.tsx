@@ -37,7 +37,7 @@ export default async function Home({
         <div className="mb-3 flex items-center justify-between">
           <h1 className="text-xl font-bold">Locations</h1>
           <div className="flex items-center gap-3">
-            <Link href="/locations/new" className="btn-primary text-sm">
+            <Link href="/locations/new" className="btn-primary text-sm" style={{ backgroundColor: "#2563EB" }}>
               + Add Location
             </Link>
             <Link href="/locations" className="text-sm font-semibold text-(--color-primary)">

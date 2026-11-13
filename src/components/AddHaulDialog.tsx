@@ -92,7 +92,7 @@ export default function AddHaulDialog({
                 type="number"
                 min="0"
                 defaultValue={0}
-                className="field"
+                className="field ml-4"
               />
             </div>
             <div>
