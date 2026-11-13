@@ -43,7 +43,7 @@ export default async function LocationDetailPage({
         </div>
 
         <div className="card grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
-          <Field label="Location Description" value={location.locationDescription || "—"} />
+          <Field label="Location Desription" value={location.locationDescription || "—"} />
           <Field label="Date" value={formatDate(location.date)} />
           <Field label="Latitude" value={location.latitude || "—"} />
           <Field label="Longitude" value={location.longitude || "—"} />
