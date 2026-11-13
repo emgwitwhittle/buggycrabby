@@ -32,7 +32,7 @@ export default async function CalendarDayPage({ params }: PageProps<"/calendar/[
       </div>
 
       {hauls.length === 0 ? (
-        <p className="text-(--color-muted)">No hauls logged for this day.</p>
+        <p className="text-(--color-muted)">No haulls logged for this day.</p>
       ) : (
         <ul className="flex flex-col gap-2">
           {hauls.map((haul, idx) => {
