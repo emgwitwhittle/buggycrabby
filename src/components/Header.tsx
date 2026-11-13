@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getCurrentUser } from "@/lib/session";
 import { logoutAction } from "@/lib/actions";
 import CrabLogo from "@/components/CrabLogo";
+import HomeNavLink from "@/components/HomeNavLink";
 
 export default async function Header() {
   const user = await getCurrentUser();
@@ -14,9 +15,7 @@ export default async function Header() {
           Crabby
         </Link>
         <nav className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-          <Link href="/" className="text-(--color-foreground) hover:text-(--color-primary)">
-            Home
-          </Link>
+          <HomeNavLink />
           <Link
             href="/locations"
             className="text-(--color-foreground) hover:text-(--color-primary)"
