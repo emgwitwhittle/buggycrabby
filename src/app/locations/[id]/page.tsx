@@ -45,7 +45,7 @@ export default async function LocationDetailPage({
         <div className="card grid grid-cols-1 gap-3 p-4 sm:grid-cols-2">
           <Field label="Location Desription" value={location.locationDescription || "—"} />
           <Field label="Date" value={formatDate(location.date)} />
-          <Field label="Latitude" value={location.latitude || "—"} />
+          <Field label="Latitude" value={location.latitude || "—"} valueClassName="ml-4" />
           <Field label="Longitude" value={location.longitude || "—"} />
           <Field label="Added by" value={addedByNames.join(", ") || "—"} />
           <Field
@@ -63,13 +63,21 @@ export default async function LocationDetailPage({
   );
 }
 
-function Field({ label, value }: { label: string; value: string }) {
+function Field({
+  label,
+  value,
+  valueClassName,
+}: {
+  label: string;
+  value: string;
+  valueClassName?: string;
+}) {
   return (
     <div>
       <p className="text-xs font-semibold uppercase tracking-wide text-(--color-muted)">
         {label}
       </p>
-      <p className="font-medium">{value}</p>
+      <p className={`font-medium${valueClassName ? ` ${valueClassName}` : ""}`}>{value}</p>
     </div>
   );
 }
