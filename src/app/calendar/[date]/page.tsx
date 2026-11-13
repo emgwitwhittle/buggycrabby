@@ -28,7 +28,7 @@ export default async function CalendarDayPage({ params }: PageProps<"/calendar/[
             {totalKeepers === 1 ? "" : "s"} total
           </p>
         </div>
-        <AddHaulDialog locations={allLocations} presetDate={date} />
+        <AddHaulDialog locations={allLocations} />
       </div>
 
       {hauls.length === 0 ? (
