@@ -23,6 +23,9 @@ export async function addLocationAction(formData: FormData) {
   if (!pinNumber) {
     throw new Error("Pin Number is required.");
   }
+  if (longitude && !Number.isFinite(Number(longitude))) {
+    throw new Error("Longitude must be a number.");
+  }
 
   const user = await getCurrentUser();
 

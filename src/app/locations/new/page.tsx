@@ -43,7 +43,16 @@ export default function NewLocationPage() {
             <label className="field-label" htmlFor="longitude">
               Longitude
             </label>
-            <input id="longitude" name="longitude" className="field" placeholder="-122.3321" />
+            <input
+              id="longitude"
+              name="longitude"
+              type="number"
+              step="any"
+              min="-180"
+              max="180"
+              className="field"
+              placeholder="-122.3321"
+            />
           </div>
         </div>
 
