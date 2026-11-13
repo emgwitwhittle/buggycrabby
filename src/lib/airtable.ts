@@ -272,7 +272,9 @@ export async function getKeepersByDateForMonth(
     if (!dateValue) continue;
     const day = dateValue.slice(0, 10);
     const keepers = Number(record.fields[HAUL_FIELDS.KEEPERS] ?? 0);
-    totals.set(day, (totals.get(day) ?? 0) + keepers);
+    if (!totals.has(day)) {
+      totals.set(day, keepers);
+    }
   }
   return totals;
 }
