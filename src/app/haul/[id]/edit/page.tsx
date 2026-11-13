@@ -52,12 +52,13 @@ export default async function EditHaulPage({ params }: PageProps<"/haul/[id]/edi
             </label>
             <input
               id="keepers"
-              name="keepers"
               type="number"
               min="0"
+              disabled
               defaultValue={haul.keepers}
               className="field"
             />
+            <input type="number" name="keepers" required className="sr-only" />
           </div>
           <div>
             <label className="field-label" htmlFor="thrownBack">
