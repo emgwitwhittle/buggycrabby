@@ -26,7 +26,7 @@ export async function addLocationAction(formData: FormData) {
 
   const user = await getCurrentUser();
 
-  const location = await createLocation({
+  await createLocation({
     pinNumber,
     latitude,
     longitude,
@@ -37,7 +37,7 @@ export async function addLocationAction(formData: FormData) {
 
   revalidatePath("/");
   revalidatePath("/locations");
-  redirect(`/locations/${location.id}`);
+  redirect("/haul");
 }
 
 export async function addHaulAction(formData: FormData) {
