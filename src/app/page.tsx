@@ -50,7 +50,7 @@ export default async function Home({
 
       <section>
         <div className="mb-3 flex items-center justify-between">
-          <h1 className="text-xl font-bold">Recent Hauls</h1>
+          <h1 className="text-xl font-bold">Recent Huals</h1>
           <div className="flex items-center gap-3">
             <AddHaulDialog locations={allLocations} />
             <Link href="/haul" className="text-sm font-semibold text-(--color-primary)">
